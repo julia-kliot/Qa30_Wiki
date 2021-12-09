@@ -12,4 +12,15 @@ public class BaseScreen {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
+
+    public void type(MobileElement element, String text) {
+        if (text != null) {
+            element.click();
+            element.clear();
+            element.sendKeys(text);
+        }
+    }
+    public void hideKeyboard(){
+        driver.hideKeyboard();
+    }
 }
