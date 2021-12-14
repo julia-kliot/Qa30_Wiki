@@ -15,29 +15,22 @@ public class MainScreen extends BaseScreen {
     MobileElement searchButton;
     @FindBy(xpath = "//*[@resource-id='org.wikipedia:id/menu_overflow_button']")
     MobileElement flowButton;
-    @FindBy (xpath ="/*[@resource-id= 'org.wikipedia:id/explore_overflow_account_name']" )
-    MobileElement logWikiButton;
 
 
 
     public String getDetail() {
         return detailView.getText();
 
-            }
+    }
 
-            public SearchScreen clickOnSearchFromMainPage(){
-            searchButton.click();
-            return new SearchScreen(driver);
-            }
-
-            public  MainScreen clickOnFlowButton(){
+    public SearchScreen clickOnSearchFromMainPage() {
+        searchButton.click();
+        return new SearchScreen(driver);
+    }
+    public TultipLoginScreen clickOnFlowButton() {
         flowButton.click();
-        return this;
-            }
+        return new TultipLoginScreen(driver);
+    }
 
-            public LoginScreen clickOnLogInWikiButton(){
-        logWikiButton. click();
-        return new LoginScreen(driver);
 
-            }
 }
