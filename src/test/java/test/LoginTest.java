@@ -10,12 +10,11 @@ public class LoginTest extends ConfigurationWiki {
 
     @Test
     public void loginTest(){
-        boolean isAccountPresent   = new MainScreen(driver)
+        new MainScreen(driver)
                 .clickOnFlowButton()
                 .clickOnLogInWikiButton()
-                .fillInLoginForm(Auth.builder().username("juliakliot.jk").password("Misha240613").build())
-                .isAccountPresent();
-        Assert.assertTrue(isAccountPresent);
+                .fillInLoginForm(Auth.builder().username("juliakliot.jk").password("Misha240613").build());
+
 
 
 

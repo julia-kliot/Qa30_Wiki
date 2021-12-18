@@ -13,6 +13,7 @@ public class TultipLoginScreen  extends  BaseScreen{
     MobileElement logWikiButton;
 
     public LoginScreen clickOnLogInWikiButton() {
+        should(logWikiButton,20);
         logWikiButton.click();
         return new LoginScreen(driver);
 

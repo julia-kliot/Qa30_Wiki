@@ -9,10 +9,11 @@ public class HomeScreen extends BaseScreen{
     public HomeScreen(AppiumDriver<MobileElement> driver) {
         super(driver);
     }
-    @FindBy(xpath = "//*[@resource-id='org.wikipedia:id/explore_overflow_account_name']")
+    @FindBy(xpath = "//*[text()='Juliakliot.jk']")
     MobileElement accountName;
 
     public boolean isAccountPresent() {
+       // should(accountName,20);
         return accountName.isDisplayed();
     }
     public HomeScreen isAccountPresentAssert() {
