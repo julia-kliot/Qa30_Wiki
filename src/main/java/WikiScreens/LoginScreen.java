@@ -21,17 +21,17 @@ public class LoginScreen extends  BaseScreen{
 
 
 
-    public HomeScreen fillInLoginForm(Auth user){
-       //should(username,20);
+    public MainScreen fillInLoginForm(Auth user){
+
         type(username,user.getUsername());
         should(username,40);
         toggleButton.click();
-        //type(password, user.getPassword());
         password.click();
         Actions action = new Actions(driver);
         action.sendKeys(user.getPassword()).perform();
+        should(logButton,20);
         logButton.click();
-        return new HomeScreen(driver);
+        return new MainScreen(driver);
     }
 
 
